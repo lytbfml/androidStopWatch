@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <FrameLayout
+            android:id="@+id/parentFrameLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <ImageView
+                android:id="@+id/backgroundImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/background">
+        </ImageView>
+
+        <LinearLayout
+                android:id="@+id/linerLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+            <!-- TODO: Draw the timerbackground image for the Linear layout below-->
+            <LinearLayout
+                    android:id="@+id/timerBackground"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/timerView"
+                          android:textSize="60sp"
+                          style="@style/timerText"
+                          android:text="@string/timer"/>
+
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/timerMsView"
+                          android:textSize="60sp"
+                          style="@style/timerText"
+                          android:text="@string/timerMs"/>
+
+
+            </LinearLayout>
+
+
+            <!-- TODO: Draw the button area image for the Linear layout below-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+
+                <Button android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_stop"
+                        android:background="@drawable/btn_stop"
+                        android:text="@string/stopText"
+                        android:onClick="stopClick"
+                        android:textSize="25sp"
+                        android:visibility="gone"/>
+
+
+                <Button android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_start"
+                        android:background="@drawable/btn_start"
+                        android:text="@string/startText"
+                        android:onClick="startClick"
+                        android:textSize="25sp"
+                        android:visibility="visible"/>
+
+
+                <Button android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_reset"
+                        android:background="@drawable/btn_reset"
+                        android:text="@string/resetText"
+                        android:onClick="resetClick"
+                        android:textSize="25sp"
+                        android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:id="@+id/backgroundImageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/hline">
+                </ImageView>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/backgroundText"
+                    style="@style/backgroundText"
+                    android:text="@string/backgroundText">
+            </TextView>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
